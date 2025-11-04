@@ -120,6 +120,50 @@
             border-radius: 2px;
         }
 
+        /* Courses */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .course-card {
+            background: rgba(0,212,255,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid rgba(0,212,255,0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,212,255,0.2);
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0,212,255,0.6);
+            box-shadow: 0 10px 40px rgba(0,212,255,0.4);
+        }
+
+        .course-video {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+
+        .course-info {
+            padding: 20px;
+        }
+
+        .course-title {
+            font-size: 1.3em;
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .course-desc {
+            color: #b0e0e6;
+            line-height: 1.6;
+        }
+
         /* Skills */
         .skills-grid {
             display: grid;
@@ -132,19 +176,39 @@
             background: rgba(0,255,169,0.1);
             padding: 20px;
             border-radius: 15px;
-            border: 1px solid rgba(0,255,169,0.3);
+            border: 2px solid rgba(0,255,169,0.3);
             transition: all 0.3s ease;
             text-align: center;
+            box-shadow: 0 0 20px rgba(0,255,169,0.2);
         }
 
         .skill-card:hover {
             background: rgba(0,255,169,0.2);
             transform: scale(1.05);
+            border-color: rgba(0,255,169,0.6);
+            box-shadow: 0 0 30px rgba(0,255,169,0.4);
         }
 
         .skill-icon {
             font-size: 2.5em;
             margin-bottom: 10px;
+        }
+
+        .skill-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            border: 3px solid rgba(0,255,169,0.5);
+            margin-bottom: 15px;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(0,255,169,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover .skill-img {
+            border-color: rgba(0,255,169,0.8);
+            box-shadow: 0 0 30px rgba(0,255,169,0.5);
+            transform: scale(1.1);
         }
 
         /* Experience */
@@ -221,7 +285,7 @@
             <h1>علیرضا عیدزاده</h1>
             <p class="subtitle">معلم ریاضی | برنامه نویس | مدرس برنامه نویسی و هوش مصنوعی</p>
             <p class="bio">
-                !یکی که عاشق یاد دادن و یاد گرفتنه.
+                یکی که عاشق یاد دادن و یاد گرفتنه.
 
                 برای من تدریس فقط انتقال دانش نیست، یه ماجراجویی واقعی بین ایده‌ها و تجربه‌هاست.
                 چند ساله با دانش‌آموزای باهوش و کنجکاو کار می‌کنم تا دنیای تکنولوژی رو ساده، جذاب و قابل لمس ببینن.
@@ -231,15 +295,36 @@
         </header>
 
         <section class="section">
+            <h2 class="section-title">دوره‌های من</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <iframe class="course-video" src="<div id="29340192047"><script type="text/JavaScript" src="https://www.aparat.com/embed/swh291z?data[rnddiv]=29340192047&data[responsive]=yes&muted=true&titleShow=true&recom=self"></script></div>" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                    <div class="course-info">
+                        <h3 class="course-title">دوره پایتون مقدماتی</h3>
+                        <p class="course-desc">بدون هیچ مقدمه ای یادگیری برنامه نویسی رو شروع کن</p>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <iframe class="course-video" src="<div id="51413370619"><script type="text/JavaScript" src="https://www.aparat.com/embed/igbko83?data[rnddiv]=51413370619&data[responsive]=yes&titleShow=true&recom=self"></script></div>" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                    <div class="course-info">
+                        <h3 class="course-title">دوره پایتون مقدماتی پلاس</h3>
+                        <p class="course-desc">عمیق تر شدن در مفاهیم اولیه برنامه نویسی پایتون</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
             <h2 class="section-title">مهارت‌های من</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <div class="skill-icon">💻</div>
+                    <img src="programming.jpeg" alt="Programming" class="skill-img">
                     <h3>برنامه‌نویسی</h3>
                     <p>Python</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">𝞹🧠📚</div>
+                    <img src="teach.jpeg" alt="Teaching" class="skill-img">
                     <h3>تدریس</h3>
                     <p>ریاضیات ، برنامه نویسی ، هوش مصنوعی</p>
                 </div>
